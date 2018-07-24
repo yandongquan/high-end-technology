@@ -1,4 +1,4 @@
-# high-end-technology
+# 高端技术
 
 :wolf: 分享一些大型互联网架构常用的高端技术
 
