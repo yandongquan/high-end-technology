@@ -35,7 +35,7 @@
     <bean id="myMessageListener" class="com.javakz.MyMessageListener"></bean>
     <bean id="myTopicMessageListener" class="com.javakz.MyTopicMessageListener"></bean>
     <!-- 消息监听容器 -->
-    <bean class="org.springframework.jms.listener.DefaultMessageListenerContainer">
+    <!--<bean class="org.springframework.jms.listener.DefaultMessageListenerContainer">
         <property name="connectionFactory" ref="connectionFactory"/>
         <property name="destination" ref="queueTextDestination"/>
         <property name="messageListener" ref="myMessageListener"/>
@@ -44,9 +44,16 @@
         <property name="connectionFactory" ref="connectionFactory"/>
         <property name="destination" ref="topicTextDestination"/>
         <property name="messageListener" ref="myTopicMessageListener"/>
-        <!-- 设置固定的线程数 -->
+        &lt;!&ndash; 设置固定的线程数 &ndash;&gt;
         <property name="concurrentConsumers" value="2"></property>
-        <!-- 设置动态的线程数 -->
+        &lt;!&ndash; 设置动态的线程数 &ndash;&gt;
         <property name="concurrency" value="2-5"></property>
-    </bean>
+    </bean>-->
+    <!-- 或使用 jms 配置 -->
+    <jms:listener-container concurrency="2-5">
+        <jms:listener destination="queue_text" ref="myMessageListener"></jms:listener>
+    </jms:listener-container>
+    <jms:listener-container concurrency="2-5" destination-type="topic">
+        <jms:listener destination="topic_text" ref="myTopicMessageListener"></jms:listener>
+    </jms:listener-container>
 </beans>
