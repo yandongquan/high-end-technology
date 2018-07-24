@@ -26,12 +26,27 @@
           class="org.apache.activemq.command.ActiveMQQueue">
         <constructor-arg value="queue_text"/>
     </bean>
+    <!--这个是队列目的地，点对点的 文本信息-->
+    <bean id="topicTextDestination"
+          class="org.apache.activemq.command.ActiveMQTopic">
+        <constructor-arg value="topic_text"/>
+    </bean>
     <!-- 我的监听类 -->
     <bean id="myMessageListener" class="com.javakz.MyMessageListener"></bean>
+    <bean id="myTopicMessageListener" class="com.javakz.MyTopicMessageListener"></bean>
     <!-- 消息监听容器 -->
     <bean class="org.springframework.jms.listener.DefaultMessageListenerContainer">
         <property name="connectionFactory" ref="connectionFactory"/>
         <property name="destination" ref="queueTextDestination"/>
         <property name="messageListener" ref="myMessageListener"/>
+    </bean>
+    <bean class="org.springframework.jms.listener.DefaultMessageListenerContainer">
+        <property name="connectionFactory" ref="connectionFactory"/>
+        <property name="destination" ref="topicTextDestination"/>
+        <property name="messageListener" ref="myTopicMessageListener"/>
+        <!-- 设置固定的线程数 -->
+        <property name="concurrentConsumers" value="2"></property>
+        <!-- 设置动态的线程数 -->
+        <property name="concurrency" value="2-5"></property>
     </bean>
 </beans>
