@@ -34,4 +34,9 @@
           class="org.apache.activemq.command.ActiveMQQueue">
         <constructor-arg value="queue_text"/>
     </bean>
+    <!--这个是订阅模式 文本信息-->
+    <bean id="topicTextDestination"
+          class="org.apache.activemq.command.ActiveMQTopic">
+        <constructor-arg value="topic_text"/>
+    </bean>
 </beans>
