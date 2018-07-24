@@ -21,8 +21,8 @@ ActiveMQ 是Apache出品，最流行的，能力强劲的开源消息总线。Ac
 #### 实例
 
 * [x] [activemq-demo](https://github.com/yandongquan/high-end-technology/tree/master/activemq-demo)
-* [ ] [spring-activemq-produce]()
-* [ ] [spring-activemq-consumer]()
+* [x] [spring-activemq-produce](https://github.com/yandongquan/high-end-technology/tree/master/spring-activemq-producer)
+* [x] [spring-activemq-consumer](https://github.com/yandongquan/high-end-technology/tree/master/spring-activemq-consumer)
 
 ### RocketMQ
 
