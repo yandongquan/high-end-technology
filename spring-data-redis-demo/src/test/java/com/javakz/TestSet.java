@@ -7,6 +7,8 @@ import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
+import java.util.Set;
+
 /**
  *  .--,       .--,
  * ( (  \.---./  ) )
@@ -22,30 +24,39 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
  *   (((__) (__)))    高山仰止,景行行止.虽不能至,心向往之。
  * ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
  * @Author: yandq
- * @Description: 这是值类型操作测试类
- * @Date: Create in 18:50 2018/7/25
+ * @Description: 这是set类型操作测试类
+ * @Date: Create in 19:07 2018/7/25
  * @Modified By: 
  */
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations = "classpath:spring/spring-redis.xml")
-public class TestValue {
+public class TestSet {
 
     @Autowired
     private RedisTemplate redisTemplate;
 
     @Test
     public void setValue() {
-        redisTemplate.boundValueOps("name").set("hello");
+        redisTemplate.boundSetOps("name").add("111");
+        redisTemplate.boundSetOps("name").add("222");
+        redisTemplate.boundSetOps("name").add("333");
+        redisTemplate.boundSetOps("name").add("444");
+        redisTemplate.boundSetOps("name").add("555");
     }
-
     @Test
     public void getValue() {
-        String result = (String)redisTemplate.boundValueOps("name").get();
-        System.out.println(result);
+        // set: 无序的 不重复
+        Set members = redisTemplate.boundSetOps("name").members();
+        System.out.println(members);
     }
 
     @Test
-    public void delValue() {
+    public void delOneValue() {
+        redisTemplate.boundSetOps("name").remove("333");
+    }
+
+    @Test
+    public void delAllValue() {
         redisTemplate.delete("name");
     }
 }
