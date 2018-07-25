@@ -54,7 +54,7 @@ Redis是一个开源的使用ANSI C语言编写、支持网络、可基于内存
 
 * [ ] [redis-demo]()
 * [ ] [spring-redis-demo]()
-* [ ] [spring-data-redis-demo]()
+* [x] [spring-data-redis-demo]()
 
 
 ## 检索 ##
