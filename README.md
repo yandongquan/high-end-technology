@@ -80,5 +80,3 @@ storage 称为存储服务器。
 * [ ] [spring-fastdfs-demo]()
 
 ## 即时通讯 ##
-
-## NoSql数据库 ##
