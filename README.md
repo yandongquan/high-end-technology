@@ -77,6 +77,6 @@ storage 称为存储服务器。
 #### 实例
 
 * [x] [fastdfs-demo]()
-* [ ] [spring-fastdfs-demo]()
+* [x] [spring-fastdfs-demo]()
 
 ## 即时通讯 ##
