@@ -4,18 +4,18 @@ import org.csource.common.NameValuePair;
 import org.csource.fastdfs.*;
 
 /**
- * .--,       .--,
+ *  .--,       .--,
  * ( (  \.---./  ) )
- * '.__/o   o\__.'
- * {=  ^  =}
- * >  -  <
- * /       \
- * //       \\
- * //|   .   |\\
- * "'\       /'"_.-~^`'-.
- * \  _  /--'         `
- * ___)( )(___
- * (((__) (__)))    高山仰止,景行行止.虽不能至,心向往之。
+ *  '.__/o   o\__.'
+ *     {=  ^  =}
+ *      >  -  <
+ *     /       \
+ *    //       \\
+ *   //|   .   |\\
+ *   "'\       /'"_.-~^`'-.
+ *      \  _  /--'         `
+ *    ___)( )(___
+ *   (((__) (__)))    高山仰止,景行行止.虽不能至,心向往之。
  * ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
  *
  * @Author: yandq
@@ -45,10 +45,9 @@ public class FastDFSClient {
      * 上传文件方法
      * <p>Title: uploadFile</p>
      * <p>Description: </p>
-     *
      * @param fileName 文件全路径
-     * @param extName  文件扩展名，不包含（.）
-     * @param metas    文件扩展信息
+     * @param extName 文件扩展名，不包含（.）
+     * @param metas 文件扩展信息
      * @return
      * @throws Exception
      */
@@ -69,10 +68,9 @@ public class FastDFSClient {
      * 上传文件方法
      * <p>Title: uploadFile</p>
      * <p>Description: </p>
-     *
      * @param fileContent 文件的内容，字节数组
-     * @param extName     文件扩展名
-     * @param metas       文件扩展信息
+     * @param extName 文件扩展名
+     * @param metas 文件扩展信息
      * @return
      * @throws Exception
      */
