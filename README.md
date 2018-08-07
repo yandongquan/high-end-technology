@@ -59,6 +59,22 @@ Redis是一个开源的使用ANSI C语言编写、支持网络、可基于内存
 
 ## 检索 ##
 
+### solr
+
+Solr是一个独立的企业级搜索应用服务器，它对外提供类似于Web-service的API接口。用户可以通过http请求，向搜索引擎服务器提交一定格式的XML文件，生成索引；也可以通过Http Get操作提出查找请求，并得到XML格式的返回结果。
+
+#### 实例
+
+* [ ] [solr-demo]()
+* [ ] [spring-solr-demo]()
+
+### ElasticSearch
+
+ElasticSearch 是一个基于Lucene的搜索服务器。它提供了一个分布式多用户能力的全文搜索引擎，基于RESTful web接口。Elasticsearch是用Java开发的，并作为Apache许可条款下的开放源码发布，是当前流行的企业级搜索引擎。设计用于云计算中，能够达到实时搜索，稳定，可靠，快速，安装使用方便。
+
+* [ ] [elasticSearch-demo]()
+* [ ] [spring-elasticSearch-demo]()
+
 ## 任务调度 ##
 
 ## 文件系统 ##
